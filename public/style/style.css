@@ -1,0 +1,87 @@
+/* **************************** */
+/* Header Section */
+/* **************************** */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d2e32;
+  position: relative;
+  text-transform: capitalize;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  height: 2.2rem;
+}
+
+/* **************************** */
+/* NAVIGATION Section */
+/* **************************** */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #f1f3f5;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all ease 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #71b88e;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #71b88e;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #80cf1f;
+}
+/* mobile nav */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #71b88e;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* sticky navigation */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  z-index: 999;
+}
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
