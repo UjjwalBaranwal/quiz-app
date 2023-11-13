@@ -1,25 +1,49 @@
 const express = require("express");
+const quizController = require("./../controller/quizController");
+
 const router = express.Router();
 
-//create quiz
-router.post("/", (req, res) => {
-  console.log("quiz created");
-});
+router
+  .route("/")
+  .get(quizController.getAllQuiz)
+  .post(quizController.createQuiz)
+  .put(quizController.updateQuiz);
 
-//get quiz
-router.get("/:quizId", (req, res) => {
-  console.log("get quized");
-});
+router
+  .route("/:quizId")
+  .get(quizController.getQuiz)
+  .delete(quizController.deleteQuiz);
 
-// update quiz
-router.put("/", (req, res) => {
-  console.log("quiz updated");
-});
+router.route("/publish").patch(quizController.publishQuiz);
 
-//delete quiz
+module.exports = router;
 
-router.delete("/:quizId", (req, res) => {
-  console.log("quiz deleted");
-});
+// //create quiz
+// router.post("/", (req, res) => {
+//   console.log("quiz created");
+//   res.send("quiz created");
+// });
 
-// publish quiz
+// //get quiz
+// router.get("/:quizId", (req, res) => {
+//   console.log("get quized");
+//   res.send("get quized");
+// });
+// // update quiz
+// router.put("/", (req, res) => {
+//   console.log("quiz updated");
+//   res.send("quiz updated");
+// });
+
+// //delete quiz
+
+// router.delete("/:quizId", (req, res) => {
+//   console.log("quiz deleted");
+//   res.send("quiz deleted");
+// });
+// // publish quiz
+// // patch
+// router.patch("/publish", (req, res) => {
+//   console.log("Published");
+//   res.send("Published");
+// });

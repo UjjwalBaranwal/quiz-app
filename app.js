@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 
 const contactRouter = require("./routes/contactRoute");
+const quizRouter = require("./routes/quizRoute");
 /// 1) MIDDLEWARE
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -23,5 +24,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/v1/contact", contactRouter);
+app.use("/api/v1/quiz", quizRouter);
 
 module.exports = app;

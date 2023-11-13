@@ -23,7 +23,6 @@ const contactSchema = new mongoose.Schema({
   },
 });
 
-// eslint-disable-next-line new-cap
 const Contact = new mongoose.model("Contact", contactSchema);
 
 module.exports = Contact;
