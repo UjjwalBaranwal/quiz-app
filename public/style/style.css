@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   /* background-color: #2d2e32; */
-  background-color:rgb(45, 47, 47); 
+  background-color: rgb(45, 47, 47);
   position: relative;
   text-transform: capitalize;
   height: 9.6rem;
@@ -50,7 +50,7 @@
 
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-  background-color: #80cf1f;
+  background-color: #40c057;
 }
 /* mobile nav */
 
@@ -86,7 +86,36 @@
 .sticky .section-hero {
   margin-top: 9.6rem;
 }
+/* **************************** */
+/* Hero Section */
+/* **************************** */
 
+.section-hero {
+  background-color: #2d2e32;
+  padding: 4.8rem 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* 
 .hero{
   background-color: #2d2e32;
   display: flex;
@@ -111,9 +140,7 @@
   position: relative;
   width: 580px;
 
-}
-
-
+} */
 
 .scroll-up {
   position: fixed;
@@ -127,3 +154,163 @@
   height: 3rem;
 }
 
+/* **************************** */
+/* FAQ Section */
+/* **************************** */
+
+.section-faq {
+  background-color: #2d2e32;
+  padding: 4.8rem 9.6rem 0;
+}
+
+.accordion {
+  /* background-color: #343a40; */
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.item {
+  box-shadow: 0 0 3.2rem rgba(0, 0, 0, 0.1);
+  padding: 2.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 2.4rem;
+  row-gap: 32px;
+}
+.number,
+.text {
+  font-size: 2.4rem;
+  font-weight: 500;
+  /* color: #087f5b; */
+}
+.number {
+  color: #ced4da;
+}
+.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  stroke: #087f5b;
+}
+.hidden-box {
+  grid-column: 2;
+  display: none;
+}
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+.hidden-box ul {
+  color: #868e96;
+  margin-left: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/* open design for accordion */
+.open {
+  /* border-top: 4px solid #087f5b; */
+  display: block;
+}
+.item:hover {
+  border-top: 4px solid #087f50;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+.text-style {
+  font-weight: 500;
+  color: #bfc3c6;
+  letter-spacing: -0.5px;
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+.faq-description {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+/* ******************************* */
+/* CTA section */
+/* ******************************* */
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem 0;
+  background-color: #25262a;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-image: linear-gradient(to right bottom, #484f55, #848a91);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+  /* temp height */
+  /* height: 50rem; */
+}
+
+.cta-text-box {
+  /* color: #45260a; */
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(49, 26, 6, 0.35),
+      rgba(32, 15, 1, 0.373)
+    ),
+    url("../img/10136664_17973871.jpg");
+  background-size: cover;
+  background-position: right;
+  filter: brightness(70%);
+  /* background-repeat: no-repeat; */
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  /* margin-bottom: 12.8rem; */
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
