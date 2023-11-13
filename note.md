@@ -84,6 +84,34 @@ all use rem instead of px.
       </div>
     </section>
 
+    /*
+
+.hero{
+background-color: #2d2e32;
+display: flex;
+justify-content: space-around;
+height: 600px;
+padding: 0 4.8rem;
+}
+
+.hero h1{
+color: white;
+font-family: 'Times New Roman', Times, serif;
+}
+.intro-text{
+position: relative;
+font-weight: 200;
+top: 150px;
+font-size: 25px;
+max-width: 500px;
+}
+
+.intro-image{
+position: relative;
+width: 580px;
+
+} \*/
+
 <!-- <script>
       var typed = new Typed("#element", {
         strings: ["Graphic Designer", "Web Developer", "Web Designer."],
