@@ -24,7 +24,7 @@ exports.createQuiz = async (req, res) => {
   try {
     const newQuiz = await Quiz.create(req.body);
 
-    res.status(200).json({
+    res.status(201).json({
       status: "success",
       data: {
         quiz: newQuiz,
@@ -40,11 +40,17 @@ exports.createQuiz = async (req, res) => {
 
 exports.getQuiz = async (req, res) => {
   try {
-    const quiz = await Quiz.findById(req.param.quizId);
+    const quizId = req.params.quizId;
+    const quiz = await Quiz.findById(quizId, {
+      name: 1,
+      questionList: 1,
+      answer_list: 1,
+    });
 
     res.status(200).json({
       status: "success",
       data: {
+        quizId: quiz._id,
         quiz,
       },
     });
