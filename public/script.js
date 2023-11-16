@@ -18,6 +18,8 @@ function scrollUp() {
   });
 }
 
+
+
 scrollUpbtn.addEventListener("click", scrollUp);
 /////////////////////////////////////////////////////////////////
 ////////////////// Making FAQs

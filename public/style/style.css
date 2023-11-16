@@ -6,14 +6,15 @@
   justify-content: space-between;
   align-items: center;
   /* background-color: #2d2e32; */
-  background-color: rgb(45, 47, 47);
+  background-color: #25262a;
   position: relative;
   text-transform: capitalize;
   height: 9.6rem;
   padding: 0 4.8rem;
 }
 .logo {
-  height: 21rem;
+  height: 7rem;
+  padding: 1rem;
 }
 
 /* **************************** */
@@ -25,6 +26,7 @@
   display: flex;
   align-items: center;
   gap: 4.8rem;
+  scroll-behavior: smooth;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -91,7 +93,7 @@
 /* **************************** */
 
 .section-hero {
-  background-color: #2d2e32;
+  background-color: #25262a;
   padding: 4.8rem 9.6rem 0;
 }
 
@@ -112,7 +114,9 @@
 }
 
 .hero-img {
-  width: 100%;
+    position: relative;
+    top: -100px;
+    width: 100%;
 }
 
 /* *************************************************** */
@@ -130,6 +134,9 @@
   width: 3rem;
   height: 3rem;
   color: #333;
+}
+.hidden {
+  display: none;
 }
 
 /* **************************** */
@@ -168,7 +175,7 @@
 .icon {
   height: 2.4rem;
   width: 2.4rem;
-  stroke: #087f5b;
+  stroke: #71b88e;
 }
 .hidden-box {
   grid-column: 2;
@@ -192,7 +199,7 @@
   display: block;
 }
 .item:hover {
-  border-top: 4px solid #087f50;
+  border-top: 4px solid #71b88e;
 }
 .icon:hover {
   cursor: pointer;
@@ -249,11 +256,11 @@
 }
 .cta-img-box {
   background-image: linear-gradient(
-      to right bottom,
-      rgba(49, 26, 6, 0.35),
-      rgba(32, 15, 1, 0.373)
-    ),
-    url("../img/10136664_17973871.jpg");
+    to right bottom,
+    rgba(49, 26, 6, 0.35),
+    rgba(32, 15, 1, 0.373)
+  ),
+    url("../img/contactForm.jpg");
   background-size: cover;
   background-position: right;
   filter: brightness(70%);
