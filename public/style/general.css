@@ -143,7 +143,7 @@ body {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem rgba(12, 9, 7, 0.5);
+  box-shadow: 0 0 0 0.4rem rgba(12, 9, 7, 0.5);
 }
 /* HELPER/SETTING class */
 .margin-right-sm {
@@ -157,4 +157,8 @@ body {
 }
 strong {
   font-weight: 500;
+}
+
+.hidden{
+  visibility: hidden;
 }

@@ -1,4 +1,4 @@
-@media (max-width: 59em) {
+@media (max-width: 72em) {
   /* mobile navigation */
   .btn-mobile-nav {
     display: block;
@@ -45,4 +45,23 @@
   .main-nav-link:visited {
     font-size: 3rem;
   }
+  .content{
+    grid-template-columns: 1fr ;
+  }
+  .wrapper {
+		flex-direction: column;
+	}
+	.indicator {
+		border-right: none;
+	}
+  .tab-heading{
+    height: 4.5rem;
+    grid-template-columns: 1fr;
+  }
+  .action .profile{
+    position: relative;
+    top: -80px;
+    right: -180px;
+  }
+  
 }
