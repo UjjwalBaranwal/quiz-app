@@ -28,6 +28,10 @@ const quizSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  quizTime: {
+    type: Number,
+    default: 30,
+  },
 });
 
 const Quiz = new mongoose.model("Quiz", quizSchema);
