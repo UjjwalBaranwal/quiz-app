@@ -6,32 +6,32 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
-function menuToggle(){
-  const toggleMenu = document.querySelector('.menu');
-  toggleMenu.classList.toggle('active')
-} 
+function menuToggle() {
+  const toggleMenu = document.querySelector(".menu");
+  toggleMenu.classList.toggle("active");
+}
 
 // student dashboard
- 
-const allIndicator = document.querySelectorAll('.indicator li');
-const allContent = document.querySelectorAll('.tab-content li');
 
-allIndicator.forEach(item=> {
-  item.addEventListener('click', function () {
+const allIndicator = document.querySelectorAll(".indicator li");
+const allContent = document.querySelectorAll(".tab-content li");
+
+allIndicator.forEach((item) => {
+  item.addEventListener("click", function () {
     const content = document.querySelector(this.dataset.target);
 
-    allIndicator.forEach(i=> {
-      i.classList.remove('active');
-    })
+    allIndicator.forEach((i) => {
+      i.classList.remove("active");
+    });
 
-    allContent.forEach(i=> {
-      i.classList.remove('active');
-    })
+    allContent.forEach((i) => {
+      i.classList.remove("active");
+    });
 
-    content.classList.add('active');
-    this.classList.add('active');
-  })
-})
+    content.classList.add("active");
+    this.classList.add("active");
+  });
+});
 
 // scroll to the top
 
@@ -45,24 +45,23 @@ function scrollUp() {
   });
 }
 
-window.addEventListener('scrollY', function(){
-  if(this.window.pageYOffset < 300){
-    scroll-up.classList.add("hidden");
+window.addEventListener("scrollY", function () {
+  if (this.window.pageYOffset < 300) {
+    scroll - up.classList.add("hidden");
   }
-})
-
+});
 
 scrollUpbtn.addEventListener("click", scrollUp);
 
 // smooth scrolling effect for links
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
   });
 });
 
@@ -107,6 +106,5 @@ loginBtn.addEventListener("click", () => {
   container.classList.remove("active");
 });
 
-
-
-
+/////////////////////////////////////////////////////////////////////
+// ////////////////////// Button for contact us form

@@ -59,6 +59,12 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
+// creating password changed at
+userSchema.pre("save", async function (next) {
+  if (this.isModified("password") || this.isNew) return next();
+  this.changedPasswordAt = Date.now() - 1000;
+  next();
+});
 /// creating the decryption of the password
 // this method is instance method its mean its available in whole file
 userSchema.methods.correctPassword = async function (
