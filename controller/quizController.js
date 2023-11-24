@@ -73,7 +73,9 @@ exports.updateQuiz = catchAsync(async (req, res, next) => {
   if (req.user.id !== quiz.createdBy) {
     return next(new appError("you are not authorize", 403));
   }
-  // quiz.name = req.body.name;
+  if (quiz.isPublish) {
+    return next(new appError("you cannot update a publish quiz", 405));
+  }
   quiz.questionList = req.body.questionList;
   quiz.answer_list = req.body.answer_list;
   await quiz.save();
