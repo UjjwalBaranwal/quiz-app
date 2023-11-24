@@ -10,7 +10,7 @@ router
   .put(quizController.updateQuiz);
 
 router
-  .route("/:quizId`")
+  .route("/:quizId")
   .get(quizController.getQuiz)
   .delete(quizController.deleteQuiz);
 

@@ -75,11 +75,24 @@ exports.updateQuiz = catchAsync(async (req, res, next) => {
 
 exports.deleteQuiz = catchAsync(async (req, res, next) => {
   const quizId = req.params.quizId;
+
+  // Fetch the quiz based on the quizId
+  const quiz = await Quiz.findById(quizId);
+
+  // Check if the quiz exists
   if (!quiz) {
-    // console.log(quiz);
-    return next(new appError("quiz is not found", 404));
+    return next(new appError("Quiz not found", 404));
   }
+
+  // Delete the quiz from the database
   await Quiz.deleteOne({ _id: quizId });
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      quiz, // You might want to include the deleted quiz in the response
+    },
+  });
 });
 
 exports.publishQuiz = async (req, res) => {
