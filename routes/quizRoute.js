@@ -1,20 +1,22 @@
 const express = require("express");
 const quizController = require("./../controller/quizController");
-
+const authController = require("./../controller/authController");
 const router = express.Router();
 
 router
   .route("/")
-  .get(quizController.getAllQuiz)
-  .post(quizController.createQuiz)
-  .put(quizController.updateQuiz);
+  .get(authController.protect, quizController.getAllQuiz)
+  .post(authController.protect, quizController.createQuiz)
+  .put(authController.protect, quizController.updateQuiz);
 
 router
   .route("/:quizId")
-  .get(quizController.getQuiz)
-  .delete(quizController.deleteQuiz);
+  .get(authController.protect, quizController.getQuiz)
+  .delete(authController.protect, quizController.deleteQuiz);
 
-router.route("/publish").patch(quizController.publishQuiz);
+router
+  .route("/publish")
+  .patch(authController.protect, quizController.publishQuiz);
 
 module.exports = router;
 

@@ -20,7 +20,8 @@ exports.getAllQuiz = catchAsync(async (req, res, next) => {
 exports.createQuiz = async (req, res) => {
   try {
     const newQuiz = await Quiz.create(req.body);
-
+    newQuiz.createdBy = req.user._id;
+    console.log("created by " + newQuiz.createdBy);
     res.status(201).json({
       status: "success",
       data: {
@@ -85,6 +86,7 @@ exports.deleteQuiz = catchAsync(async (req, res, next) => {
   }
 
   // Delete the quiz from the database
+
   await Quiz.deleteOne({ _id: quizId });
 
   res.status(200).json({
@@ -95,18 +97,19 @@ exports.deleteQuiz = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.publishQuiz = async (req, res) => {
-  try {
-    res.status(200).json({
-      status: "success",
-      data: {
-        contact,
-      },
-    });
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: "err",
-    });
+exports.publishQuiz = catchAsync(async (req, res, next) => {
+  const quizId = req.body.quizId;
+  const quiz = await Quiz.findById(quizId);
+  if (!quiz) {
+    return next(new appError("cannnot find the quiz", 404));
   }
-};
+  quiz.isPublish = true;
+  quiz.save();
+  res.status(200).json({
+    status: "success",
+    message: "quiz is successfully published",
+    data: {
+      quizId,
+    },
+  });
+});
