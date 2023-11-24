@@ -25,7 +25,7 @@ exports.getAllContact = async (req, res) => {
 exports.createContact = async (req, res) => {
   try {
     const newContact = await Contact.create(req.body);
-
+    console.log(req.body);
     res.status(200).json({
       status: "success",
       data: {
