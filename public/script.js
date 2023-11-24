@@ -106,5 +106,28 @@ loginBtn.addEventListener("click", () => {
   container.classList.remove("active");
 });
 
+///////////////////////////////////////////////////////////
+// Making the sitcky navigation after the Hero section
+const sectionHeroEl = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    //in the viewport
+    root: null, //root : null for enabling viewport
+    threshold: 0, //this mean the event happen as soon as the 0% of the hero-section inside of the viewport
+    rootMargin: "-80px", //height of sticky bar is 8 rem
+  }
+);
+obs.observe(sectionHeroEl);
+
 /////////////////////////////////////////////////////////////////////
 // ////////////////////// Button for contact us form
