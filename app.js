@@ -1,5 +1,6 @@
 const morgan = require("morgan");
 const express = require("express");
+const ejs = require("ejs");
 
 const app = express();
 
@@ -26,6 +27,16 @@ app.use((req, res, next) => {
   next();
 });
 
+///
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
+app.post("/", (req, res) => {
+  console.log(req.body);
+});
 app.use("/api/v1/contact", contactRouter);
 app.use("/api/v1/quiz", quizRouter);
 app.use("/api/v1/user", userRouter);
