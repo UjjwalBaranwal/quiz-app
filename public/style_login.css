@@ -85,6 +85,17 @@ body{
     width: 100%;
 }
 
+select#role{
+    background-color: #ced4da;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.625rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    width: 19rem ;
+    position: relative;
+}
+
 .form-container{
     position: absolute;
     top: 0;
