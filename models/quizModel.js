@@ -18,6 +18,7 @@ const quizSchema = new mongoose.Schema({
   answer_list: {},
   createdBy: {
     type: mongoose.Types.ObjectId,
+    required: true,
   },
   createdAt: {
     type: Date,
