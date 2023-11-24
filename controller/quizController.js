@@ -1,6 +1,7 @@
 const Quiz = require("./../models/quizModel");
 const catchAsync = require("./../utils/catchAsync");
 const appError = require("./../utils/appError");
+const { decode } = require("jsonwebtoken");
 exports.getAllQuiz = catchAsync(async (req, res, next) => {
   const quizs = await Quiz.find();
   if (!quizs) {
@@ -19,9 +20,10 @@ exports.getAllQuiz = catchAsync(async (req, res, next) => {
 
 exports.createQuiz = async (req, res) => {
   try {
-    const newQuiz = await Quiz.create(req.body);
-    newQuiz.createdBy = req.user._id;
-    console.log("created by " + newQuiz.createdBy);
+    const newQuiz = await Quiz.create({ ...req.body, createdBy: req.user.id });
+    // newQuiz.createdBy = req.user.id;
+    // newQuiz.save();
+    console.log(req.user.id);
     res.status(201).json({
       status: "success",
       data: {
@@ -29,9 +31,10 @@ exports.createQuiz = async (req, res) => {
       },
     });
   } catch (err) {
+    console.log(err);
     res.status(404).json({
       status: "fail",
-      message: "err",
+      message: err,
     });
   }
 };
