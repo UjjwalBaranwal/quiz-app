@@ -3,6 +3,7 @@
 const headerEl = document.querySelector(".header");
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 btnNavEl.addEventListener("click", function () {
+  console.log("ujjwal");
   headerEl.classList.toggle("nav-open");
 });
 
@@ -33,7 +34,7 @@ allIndicator.forEach((item) => {
   });
 });
 
-// scroll to the top
+////////////////////////////////////////// scroll to the top
 
 const scrollUpbtn = document.querySelector("#scroll-up");
 
@@ -64,6 +65,31 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+///////////////////////////////////////////////////////////
+// Making the sitcky navigation after the Hero section
+const sectionHeroEl = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+      scrollUpbtn.style.display = "block";
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+      scrollUpbtn.style.display = "none";
+    }
+  },
+  {
+    //in the viewport
+    root: null, //root : null for enabling viewport
+    threshold: 0, //this mean the event happen as soon as the 0% of the hero-section inside of the viewport
+    rootMargin: "-80px", //height of sticky bar is 8 rem
+  }
+);
+obs.observe(sectionHeroEl);
 
 /////////////////////////////////////////////////////////////////
 ////////////////// Making FAQs
@@ -105,29 +131,6 @@ registerBtn.addEventListener("click", () => {
 loginBtn.addEventListener("click", () => {
   container.classList.remove("active");
 });
-
-///////////////////////////////////////////////////////////
-// Making the sitcky navigation after the Hero section
-const sectionHeroEl = document.querySelector(".section-hero");
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    console.log(ent);
-    if (!ent.isIntersecting) {
-      document.body.classList.add("sticky");
-    }
-    if (ent.isIntersecting) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    //in the viewport
-    root: null, //root : null for enabling viewport
-    threshold: 0, //this mean the event happen as soon as the 0% of the hero-section inside of the viewport
-    rootMargin: "-80px", //height of sticky bar is 8 rem
-  }
-);
-obs.observe(sectionHeroEl);
 
 /////////////////////////////////////////////////////////////////////
 // ////////////////////// Button for contact us form
