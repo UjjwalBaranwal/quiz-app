@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interface</title>
+    <link rel="stylesheet" href="style/quiz-interface.css">
+    <link rel="stylesheet" href="style/query.css">
+    <link rel="stylesheet" href="style/general.css">
+</head>
+<body>
+    <main>
+        <section id="start">
+            <div class="start-container">
+                <div class="start-content">
+                    <div class="main-heading ">
+                        <h1><span class="green">Quick</span>Quill</h1>
+                    </div>
+                    <div class="s-heading">
+                        <h2>A few things to know before you start:</h2>
+                    </div>
+                    <div class="start-para">
+                        <ul>
+                            <li>
+                                <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+                                <p>Read each question carefully and thoroughly before answering.</p>
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+                                <p>Be aware of the time limit. The quiz will automatically submit at the end of the allocated time.</p>
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+                                <p>This quiz is to be completed individually. Do not collaborate with classmates or use unauthorized materials.</p>
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle" class="icon" ></ion-icon>
+                                <p>If you encounter any issues during the quiz, contact the instructor or technical support as soon as possible.</p>
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+                                <p>Do not refresh the page during the quiz, as this may result in data loss.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="startbtn" class="start-btn" >Start Quiz</button>
+                </div>
+                <!-- <div class="image">
+                    <img src="images/img2.png" alt="" class="img">
+                </div> -->
+            </div>
+        </section>
+        <section id="quiz">
+            <div class="quiz-container">
+                <div class="quiz">
+                    <div class=" quiz-header ">
+                        <div class="inst"> <p>instructions</p>
+                        <span class="inst-icon"><ion-icon name="chevron-down"></ion-icon></span>
+                        </div>
+                        <div class="quiz-name">Quiz Name</div>
+                        <div class="profile">
+                            <div class="action">
+                              <div class="profile-img" onclick="menuToggle();">
+                                <img src="img/user.png" alt="">
+                              </div>
+                              <div class="menu">
+                                <h3>
+                                  User Name
+                                  <div>
+                                    Student
+                                  </div>
+                                </h3>
+                                <ul>
+                                  <li>
+                                    <ion-icon class="icons-size"  name="person-circle"></ion-icon>
+                                    <a href="#">My Profile</a>
+                                  </li>
+                                  <li>
+                                    <ion-icon class="icons-size" name="call"></ion-icon>
+                                    <a href="#">Help</a>
+                                  </li>
+                                </ul>
+                                <div class="Log-Out">
+                                  <ion-icon class="icons-size" class="Log-Out" name="log-out-outline"></ion-icon>
+                                  <a href="#">Log Out</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer">
+                        <div class="question-count"></div>
+                        <div class="time-box">
+                            <div class="time-text">Time Left</div>
+                            <div class="time-left" id="hour"></div>:
+                            <div class="time-left" id="min"></div>:
+                            <div class="time-left" id="sec"></div>
+                        </div>
+                        <div class="time-line"></div>
+                    </div>
+                    <div class="questions">
+                        <div class="que">
+                            <h2 class="question"></h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <input type="radio" name="answer" id="ans1" class="answer">
+                                <label for="ans1" class="option1"> answer 1</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="ans2" class="answer">
+                                <label for="ans2" class="option2"> answer 2</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="ans3" class="answer">
+                                <label for="ans3" class="option3"> answer 3</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="ans4" class="answer">
+                                <label for="ans4" class="option4"> answer 4</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn" id="submit">Next</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <script src="script.js"></script>
+    <script src="quiz-interface.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

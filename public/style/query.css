@@ -63,5 +63,25 @@
     top: -80px;
     right: -180px;
   }
+
+  .quiz{
+    padding: 2rem;
+  }
   
+  .quiz .quiz-header{
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    padding: 2rem;
+  }
+  .result{
+    margin: 2rem;
+    padding: 4rem;
+  }
+  .result .image{
+    height: 20rem;
+    width: 20rem;
+  }
+  .result h2{
+    font-size: 2rem;
+  }
 }

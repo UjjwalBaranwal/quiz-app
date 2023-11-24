@@ -1,0 +1,393 @@
+
+
+.start-container{
+  min-height: 100vh;
+  display: flex;
+  padding: 4rem;
+  justify-content:center;
+  background-color:#25262a;
+  row-gap: 4rem;
+  
+}
+
+.start-content{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+/* .image{
+  width: 20rem;
+  height: 20rem;
+}
+
+.img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding: 0.3em;
+} */
+
+.main-heading{
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  font-family:'Segoe UI';
+
+}
+
+.s-heading{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+}
+
+.start-para ul li{
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #f1f3f5;
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.icon{
+  color: #71b88e;
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+.main-heading .green{
+  color: #71b88e;
+
+}
+.start-btn {
+  background-color: #71b88e; 
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  border: 0.1rem solid #000000;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background-color: #47c87d;
+}
+
+/* quiz interface */
+
+.quiz-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  width: 100%;
+}
+
+.quiz-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 115rem;
+  min-height: 8rem;
+  border: 0.1rem solid #25262a;
+	border-radius: 1rem;
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+  margin-top: 4rem;
+}
+
+.inst{
+  display: flex;
+  font-size: 2rem;
+  color: #71b88e;
+  gap: 0.6rem;
+}
+.inst-icon{
+  cursor: pointer;
+}
+
+.quiz-name{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #71b88e;
+}
+
+/* student profile */
+
+.profile{
+  height: 6rem;
+  width: 6rem;
+}
+.icons-size{
+  color: #333;
+  font-size: 2rem;
+}
+
+.action .profile-img{
+  border-radius: 50%;
+  cursor: pointer;
+  height: 60px;
+  overflow: hidden;
+  width: 60px;
+}
+.action .profile-img img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.action .menu{
+  background-color:#FFF;
+  box-sizing:0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 10px 20px;
+  position: relative;
+  width: 200px;
+  transition: 0.5s;
+  top: 40px;
+  right: 125px;
+  visibility: hidden;
+  opacity: 0;
+}
+.action .menu.active{
+  opacity: 1;
+  top: 25px;
+  right:125px;
+  visibility: visible;
+}
+.action .menu::before{
+  background-color:#fff;
+  content: '';
+  height: 20px;
+  position: absolute;
+  right: 30px;
+  transform:rotate(45deg);
+  top:-5px;
+  width: 20px;
+}
+.action .menu h3{
+  color: #555;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3em;
+  padding: 20px 0px;
+  text-align: left;
+  width: 100%;
+}
+.action .menu h3 div{
+  color: #818181;
+  font-size: 14px;
+  font-weight: 400;
+}
+.action .menu ul li{
+  align-items: center;
+  border-top:1px solid rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.action .menu a{
+  display: inline-block;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.Log-Out{
+  border-top:1px solid rgba(0,0,0,0.2);
+  padding: 0.5rem;
+}
+
+
+.Log-Out:hover a{
+  color: red;
+}
+.Log-Out:hover {
+  border-top:1px solid red;
+}
+.Log-Out .icons-size{
+  position: relative;
+  top: 5px;
+  font-size: 2.5rem;
+}
+.Log-Out:hover .icons-size{
+  color: red;
+}
+.action .menu ul li:hover img{
+  opacity: 1;
+}
+.action .menu ul li:hover a{
+  color:#71b88e;
+}
+
+.action .menu ul li:hover .icons-size{
+  color:#71b88e;
+}
+
+
+.quiz .timer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 8rem;
+  width: 100%;
+  max-width: 115rem;
+  border: 0.1rem solid #25262a;
+	border-radius: 1rem;
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+}
+
+
+
+.quiz .timer .time-box{
+  color: #004085;
+  background: #9ee6bd;
+  border: 1px solid #71b88e;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.quiz .timer .time-box .time-text{
+  color:#25262a;
+  font-weight: 500;
+  font-size: 17px;
+  user-select: none;
+  margin: 0.4rem;
+}
+
+.quiz .timer .time-box .time-left{
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 45px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #343a40;
+  border: 1px solid #343a40;
+  user-select: none;
+  margin: 0.4rem;
+}
+
+.quiz .timer .time-line{
+  align-self: flex-start;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  height: 1rem;
+  background:#71b88e;
+}
+
+.questions{
+  display: flex;
+  flex-direction: column;
+  max-width: 115rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+}
+
+.questions ul li {
+  list-style: none;
+  font-size: 2rem;
+  margin: 16px;
+  color: #f1f3f5;
+}
+
+input[type=radio] {
+  height: 1em;
+  aspect-ratio: 1;
+  border: calc(1em/8) solid #939393;
+  padding: calc(1em/8);
+  background: 
+     radial-gradient(farthest-side,#71b88e 94%,#0000) 
+     50%/0 0 no-repeat content-box;
+  border-radius: 50%;
+  outline-offset: calc(1em/10);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: inherit;
+  transition: .3s;
+}
+input[type=radio]:checked {
+  border-color: #71b88e;
+  background-size: 100% 100%;
+}
+
+.btn {
+  background-color: #71b88e; 
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  max-width:115rem;
+  width: 100%;
+  border: 0.1rem solid #000000;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #47c87d;
+}
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.result .image{
+  height: 40rem;
+  width: 40rem;
+}
+
+.result .img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+.result h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+.result h2{
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: white;
+}
+.result h3{
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: white;
+}
