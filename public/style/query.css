@@ -148,7 +148,7 @@
   /* 704/16=44 */
   .grid--3,
   .grid--4 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .heading-secondary {

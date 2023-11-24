@@ -311,8 +311,9 @@
   justify-content: center;
   background-color: #25262a;
   flex-direction: column;
-  flex-wrap: wrap;
   row-gap: 4rem;
+  padding: 4.8rem 0 12.8rem 0;
+  margin-top: 3rem;
 }
 
 .heading {
@@ -332,9 +333,7 @@
 
 .content {
   color: #ffffff;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8rem;
+
   transition: 0.3s ease-in-out;
 }
 
