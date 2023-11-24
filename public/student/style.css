@@ -48,9 +48,9 @@
   }
   
   .wrapper {
-      display: flex;
+    display: flex;
     min-height: 85vh; 
-    flex-direction: column;
+    flex-direction: row;
   }
   .indicator {
     width: 20rem;
@@ -79,6 +79,7 @@
   }
   .tab-content {
       padding: 4rem 4rem;
+      width: 100%;
   }
   
   .tab-content li {
@@ -106,9 +107,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
   }
   
+  .fq-container p{
+    line-height: 1.5;
+  }
   .search{
     display: flex;
     align-items: center;
