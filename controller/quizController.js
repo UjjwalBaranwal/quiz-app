@@ -45,9 +45,13 @@ exports.getQuiz = catchAsync(async (req, res, next) => {
     name: 1,
     questionList: 1,
     answer_list: 1,
+    createdBy: 1,
   });
   if (!quiz) {
     return next(new appError("quiz is not found", 404));
+  }
+  if (req.user.id !== quiz.createdBy) {
+    return next(new appError("you are not authorize", 403));
   }
   res.status(200).json({
     status: "success",
@@ -64,6 +68,10 @@ exports.updateQuiz = catchAsync(async (req, res, next) => {
   if (!quiz) {
     // console.log(quiz);
     return next(new appError("quiz is not found", 404));
+  }
+
+  if (req.user.id !== quiz.createdBy) {
+    return next(new appError("you are not authorize", 403));
   }
   // quiz.name = req.body.name;
   quiz.questionList = req.body.questionList;
@@ -87,6 +95,9 @@ exports.deleteQuiz = catchAsync(async (req, res, next) => {
   if (!quiz) {
     return next(new appError("Quiz not found", 404));
   }
+  if (req.user.id !== quiz.createdBy) {
+    return next(new appError("you are not authorize", 403));
+  }
 
   // Delete the quiz from the database
 
@@ -105,6 +116,9 @@ exports.publishQuiz = catchAsync(async (req, res, next) => {
   const quiz = await Quiz.findById(quizId);
   if (!quiz) {
     return next(new appError("cannnot find the quiz", 404));
+  }
+  if (req.user.id !== quiz.createdBy) {
+    return next(new appError("you are not authorize", 403));
   }
   quiz.isPublish = true;
   quiz.save();
