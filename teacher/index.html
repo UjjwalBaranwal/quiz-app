@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>TeacherPage</title>
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+    <section id="teacherDashboard" class="teacherDashboard">
+        <div class="tab-container">
+          <div class="wrapper">
+            <ul class="indicator">
+              <li class="active" data-target="#createQuiz"><ion-icon name="search"></ion-icon>Create Quiz</li>
+              <li data-target="#profile"><ion-icon name="person-circle"></ion-icon>Profile</li>
+              <li data-target="#help"><ion-icon name="call"></ion-icon>Help</li>
+            </ul>
+            <ul class="tab-content">
+              <li class="active" id="createQuiz">
+                <div class="tab-heading">
+                  <h1>Create Quiz</h1>
+                  <div class="user-profile">
+                    <div class="action">
+                      <div class="profile" onclick="menuToggle();">
+                        <img src="user.png" alt="">
+                      </div>
+                      <div class="menu">
+                        <h3>
+                        <p>User Name</p>  
+                        <p>Teacher</p>
+                        </h3>
+                        <ul>
+                          <li>
+                            <ion-icon class="icons-size"  name="person-circle"></ion-icon>
+                            <a href="#">My Profile</a>
+                          </li>
+                          <li>
+                            <ion-icon class="icons-size" name="call"></ion-icon>
+                            <a href="#">Help</a>
+                          </li>
+                        </ul>
+                        <div class="Log-Out">
+                          <ion-icon class="icons-size" class="Log-out" name="log-out-outline"></ion-icon>
+                          <a href="#">Log Out</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fq-container">
+                  <p>
+                    To create your Quiz you can move to Create Quiz section by clicking on Create Quiz button.
+                  </p>
+                  <div class="search">
+                    <form class="form">
+                      <button id="submit" class="submit-btn" >Create Quiz</button>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li id="profile">
+                <div class="pf-container">
+                  <h1>Profile</h1>
+                  <div class="profile-details">
+                  <div class="profile-pic">
+                    <img src="./user.png" alt=""> 
+                  </div>
+                    <p>Username</p>
+                    <p>Teacher</p>
+                  </div> 
+                  </div>
+              </li>
+              <li id="help">
+                <div class="help-points">
+                <h1>Help</h1>               
+                  <p>Check the FAQ's for common questions.</p>
+                  <p>Reach out to us via our <a href="#cta">contact form.</a></p>
+                  </div>
+              </li>
+            </ul>
+          </div>
+          </div>
+
+      </section>
+    </main>
+      <button class="scroll-up" id="scroll-up">
+        <ion-icon name="arrow-up-outline" class="up-arrow"></ion-icon>
+        </button>
+      <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+</body>
+</html>

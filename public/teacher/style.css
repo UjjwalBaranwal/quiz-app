@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: "Rubik", sans-serif;
+    background-color: #2d2e32;
+    line-height: 1;
+    font-weight: 400;
+    color: #c7baba;
+    overflow-x: hidden;
+  }
+  
+.teacherDashboard li{
+    list-style: none;
+  }
+  
+  .teacherDashboard {
+    background-color: #25262a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+  }
+  
+  .tab-container {
+      max-width: 115rem;
+      width: 100%;
+      background-color: #2d2e32;
+      border-radius: 2rem;
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+      margin: 6rem;
+      display: flex;
+      flex-direction: column;
+  }
+  .action .profile{
+    position: relative;
+    top: -80px;
+    right: -180px;
+  }
+  
+  .wrapper {
+    display: flex;
+    min-height: 85vh; 
+    flex-direction: row;
+  }
+  .indicator {
+    width: 22.5rem;
+    padding: 4rem 0;
+    border-right: 0.4rem solid #25262a;
+  }
+  
+  .indicator li {
+      display: flex;
+      align-items: center;
+      grid-gap: 2rem;
+      padding: 1.2rem 2.5rem;
+      cursor: pointer;
+      font-size: 2.2rem;
+      color: white;
+  }
+  
+  .indicator li:hover {
+      background-color: #8abfa1;
+  }
+  
+  .indicator li.active  {
+      width: 22.5rem;
+      border-right: 0.5rem solid #398559;
+      background: #8aba9f;
+  }
+  .tab-content {
+      padding: 6rem 6rem;
+      width: 100%;
+  }
+  
+  .tab-content li {
+      display: none;
+  }
+  
+  .tab-content li.active {
+      display: block;
+  }
+  
+  .tab-content li h1 {
+      font-size: 4rem;
+      font-weight: 600;
+      color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-content li p {
+      font-size: 2rem;
+    margin: 2rem 0 ;
+  }
+  
+  .fq-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .search{
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 1.5rem;
+    width: 30rem;
+    border: 0.1rem solid #000000;
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
+    background-color: #71b88e; 
+    font-size: medium;
+    color: white;
+    padding: 1.5rem;
+    width: 12.5rem;
+    border: 0.1rem solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #4CAF50;
+  }
+  .tab-heading{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    height: 4.5rem;
+    border-bottom: 0.2rem solid #71b88e;
+    margin-bottom: 2rem;
+  }
+  .action{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .icons-size{
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .action .profile{
+    position: relative;
+    top: -20px;
+    right: -180px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+    width: 60px;
+  }
+  .action .profile img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  .action .menu{
+    background-color:#FFF;
+    box-sizing:0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: relative;
+    width: 200px;
+    transition: 0.5s;
+    top: 100px;
+    right: 7px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .action .menu.active{
+    opacity: 1;
+    top: 60px;
+    right: 7px;
+    visibility: visible;
+  }
+  .action .menu::before{
+    background-color:#fff;
+    content: '';
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    transform:rotate(45deg);
+    top:-5px;
+    width: 20px;
+  }
+  .action .menu h3{
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 20px 0px;
+    text-align: left;
+    width: 100%;
+  }
+  .action .menu h3 div{
+    color: #818181;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .action .menu ul li{
+    align-items: center;
+    border-top:1px solid rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 10px 0px;
+  }
+  
+  .action .menu a{
+    display: inline-block;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .Log-Out{
+    border-top:1px solid rgba(0,0,0,0.2);
+    padding: 0.5rem;
+  }
+  
+  
+  .Log-Out:hover a{
+    color: red;
+  }
+  .Log-Out:hover {
+    border-top:1px solid red;
+  }
+  .Log-Out .icons-size{
+    position: relative;
+    top: 5px;
+    font-size: 2.5rem;
+  }
+  .Log-Out:hover .icons-size{
+    color: red;
+  }
+  .action .menu ul li:hover img{
+    opacity: 1;
+  }
+  .action .menu ul li:hover a{
+    color:#71b88e;
+  }
+  
+  .action .menu ul li:hover .icons-size{
+    color:#71b88e;
+  }
+  .pf-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-pic{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50% ;
+  }
+  .profile-pic img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .help-points{
+    display: block;
+    text-align: center;
+  }
