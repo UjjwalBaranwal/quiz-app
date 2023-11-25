@@ -152,6 +152,9 @@ body {
 .margin-bottom-md {
   margin-bottom: 4.8rem !important;
 }
+.margin-bottom-sm {
+  margin-bottom: 3.2rem !important;
+}
 .center-text {
   text-align: center;
 }
@@ -159,6 +162,6 @@ strong {
   font-weight: 500;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
