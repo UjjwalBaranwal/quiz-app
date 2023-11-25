@@ -108,12 +108,7 @@
   margin-top: 4rem;
 }
 
-.inst{
-  display: flex;
-  font-size: 2rem;
-  color: #71b88e;
-  gap: 0.6rem;
-}
+
 .inst-icon{
   cursor: pointer;
 }
@@ -249,12 +244,18 @@
   min-height: 8rem;
   width: 100%;
   max-width: 115rem;
-  border: 0.1rem solid #25262a;
 	border-radius: 1rem;
-	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
 }
 
+.inst h1{
+  font-size: 3rem;
+}
 
+.time-box span{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+}
 
 .quiz .timer .time-box{
   color: #004085;

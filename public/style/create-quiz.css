@@ -1,0 +1,24 @@
+.create-quiz{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    padding: 4rem;
+    justify-content:center;
+    align-items: center;
+    background-color:#25262a;
+    row-gap: 4rem;
+}
+
+.create{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.template{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
