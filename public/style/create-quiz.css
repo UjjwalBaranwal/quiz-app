@@ -3,22 +3,33 @@
     display: flex;
     flex-direction: column;
 
-    padding: 4rem;
+    padding: 2rem;
     justify-content:center;
     align-items: center;
     background-color:#25262a;
-    row-gap: 4rem;
+    row-gap: 2rem;
 }
 
 .create{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    font-size: 2rem;
 }
 
 .template{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
+}
+
+input{
+    background-color: #ced4da;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.625rem 1rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
 }
