@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudentPage</title>
-    <link rel="stylesheet" href="style.css" >
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./../../style/general.css" />
+    <link rel="stylesheet" href="./../teacher/style.css" />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <main>
-    <section id="studentDashboard" class="studentDashboard">
+      <section id="studentDashboard" class="studentDashboard">
         <div class="tab-container">
           <div class="wrapper">
             <ul class="indicator">
-              <li class="active" data-target="#findQuiz"><ion-icon name="search"></ion-icon>Find Quiz</li>
-              <li data-target="#profile"><ion-icon name="person-circle"></ion-icon>Profile</li>
+              <li class="active" data-target="#findQuiz">
+                <ion-icon name="search"></ion-icon>Find Quiz
+              </li>
+              <li data-target="#profile">
+                <ion-icon name="person-circle"></ion-icon>Profile
+              </li>
               <li data-target="#help"><ion-icon name="call"></ion-icon>Help</li>
             </ul>
             <ul class="tab-content">
@@ -23,18 +33,17 @@
                   <h1>Find Quiz</h1>
                   <div class="user-profile">
                     <div class="action">
-                      <div class="profile" onclick="menuToggle();">
-                        <img src="user.png" alt="">
+                      <div class="profile" onmouseover="menuToggle();">
+                        <img src="user.png" alt="" />
                       </div>
                       <div class="menu">
-                        <h3>
-
-                          User Name
-                          Student
-                        </h3>
+                        <h3>User Name Student</h3>
                         <ul>
                           <li>
-                            <ion-icon class="icons-size"  name="person-circle"></ion-icon>
+                            <ion-icon
+                              class="icons-size"
+                              name="person-circle"
+                            ></ion-icon>
                             <a href="#">My Profile</a>
                           </li>
                           <li>
@@ -43,7 +52,11 @@
                           </li>
                         </ul>
                         <div class="Log-Out">
-                          <ion-icon class="icons-size" class="Log-out" name="log-out-outline"></ion-icon>
+                          <ion-icon
+                            class="icons-size"
+                            class="Log-out"
+                            name="log-out-outline"
+                          ></ion-icon>
                           <a href="#">Log Out</a>
                         </div>
                       </div>
@@ -52,12 +65,27 @@
                 </div>
                 <div class="fq-container">
                   <p>
-                    Access the quiz link and discover a curated selection of quizzes thoughtfully prepared by your teacher. Enter the quiz portal to explore the educational journey your teacher has crafted just for you.
+                    Access the quiz link and discover a curated selection of
+                    quizzes thoughtfully prepared by your teacher. Enter the
+                    quiz portal to explore the educational journey your teacher
+                    has crafted just for you.
                   </p>
                   <div class="search">
                     <form class="form">
-                      <input id="search" type="text" class="input" placeholder="Enter quiz url">
-                      <button id="submit" class="submit-btn" >Take Quiz</button>
+                      <input
+                        id="search"
+                        type="text"
+                        class="input"
+                        placeholder="Enter quiz url"
+                      />
+                      <!-- <button id="submit" class="submit-btn">
+                        <a href="./../../quiz-interface.html">Take Quiz
+                      </button> -->
+                      <a
+                        href="./../../quiz-interface.html"
+                        class="btn btn--full margin-right-sm"
+                        >Find-quiz</a
+                      >
                     </form>
                   </div>
                 </div>
@@ -66,29 +94,31 @@
                 <div class="pf-container">
                   <h1>Profile</h1>
                   <div class="profile-details">
-                  <div class="profile-pic">
-                    <img src="./user.png" alt=""> 
-                  </div>
+                    <div class="profile-pic">
+                      <img src="./user.png" alt="" />
+                    </div>
                     <p>Username</p>
                     <p>Student</p>
-                  </div> 
                   </div>
+                </div>
               </li>
               <li id="help">
                 <div class="help-points">
-                <h1>Help</h1>               
+                  <h1>Help</h1>
                   <p>Check the FAQ's for common questions.</p>
-                  <p>Reach out to us via our <a href="#cta">contact form.</a></p>
-                  </div>
+                  <p>
+                    Reach out to us via our
+                    <a href="./../../index.html#cta">contact form.</a>
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
-          </div>
-
+        </div>
       </section>
     </main>
-      
-      <script src="script.js"></script>
+
+    <script src="script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -98,6 +128,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    
-</body>
+    <script src="script.js"></script>
+    <script src="./../../script.js"></script>
+  </body>
 </html>

@@ -82,7 +82,7 @@
   height: 8rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.308);
+  background-color: #25262a;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   z-index: 999;
 }
@@ -379,7 +379,6 @@
   height: 18rem;
   width: 20rem;
   padding: 1rem;
-  
 }
 
 .img {
@@ -703,4 +702,3 @@
 .action .menu ul li:hover .icons-size {
   color: #71b88e;
 }
-

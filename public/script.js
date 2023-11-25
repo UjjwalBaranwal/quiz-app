@@ -6,11 +6,18 @@ btnNavEl.addEventListener("click", function () {
   console.log("ujjwal");
   headerEl.classList.toggle("nav-open");
 });
-
+///////////////////////////////////////////////////////
+//////////////////// creating a mouse hover event
 function menuToggle() {
+  // const toggleMenu = document.querySelector(".menu");
+  // toggleMenu.classList.toggle("active");
+}
+
+const profileBox = document.querySelector(".profile");
+profileBox.addEventListener("mouseover", () => {
   const toggleMenu = document.querySelector(".menu");
   toggleMenu.classList.toggle("active");
-}
+});
 
 // student dashboard
 
